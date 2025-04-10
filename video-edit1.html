@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+    <title>Viral | 비디오 편집 - 자막</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section id="home">
+        <header id="header" class="header sub-header">
+            <div class="inner">
+                <div class="content">
+                    <div class="left-content">
+                        <!-- offcanvas-open 로그인 후 보여짐 -->
+                        <button type="button" class="offcanvas-open"> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <h1 class="logo">
+                            <a href="index.html">
+                                <img class="logo-img" src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </a>
+                        </h1>
+                        <span class="beta-badge">Beta</span>
+                    </div>
+
+                    <!-- log-befor 로그인 전 보여짐 -->
+                    <ul class="right-content log-befor">
+                        <li>
+                            <a class="loginBtn" href="login.html">로그인</a>
+                        </li> 
+                        <li>
+                            <a class="signupBtn" href="register-hp.html">회원가입</a>
+                        </li>
+                    </ul>
+                    <!-- log-after 로그인 후 보여짐 -->
+                    <ul class="right-content log-after">
+                        <li>
+                            <a class="guideBtn after-item" href="guide.html">
+                                <img src="img/hd-guide.svg" alt="사용가이드 아이콘"> 사용 가이드
+                            </a>
+                        </li> 
+                        <li>
+                            <a class="countBadge after-item" href="#">
+                                <img src="img/time-count.svg" alt="무료 횟수 카운트"> 5/5
+                            </a>
+                        </li>
+                        <li class="add-icon">
+                            <div class="circle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="add-item">
+                                <div class="item">
+                                    <a href="subscrib-info.html">구독정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="info.html">내 정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="index.html">로그아웃</a>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main id="main" class="main">
+            <div class= "inner"> 
+                <!-- 메뉴 영역 -->
+                <section class="menu-area">
+                    <div class="content">
+                        <div class="offcanvas-wrap">
+                            <div class="offcanvas">
+                                <div class="offcanvas-body">
+                                    <nav id="nav">
+                                        <ul class="gnb">
+                                            <li class="gnb-item">
+                                                <a href="my-project.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/my-project.svg" alt="내 프로젝트">내 프로젝트
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item gnb-training">
+                                                <a href="#" class="focusGnb">
+                                                    <span class="gnb-txt-cont">
+                                                        <div class="gnb-txt gnb-focus-txt">
+                                                            <img src="img/menu/template-atv.svg" alt="템플릿"> 템플릿
+                                                        </div>
+                                                        <div class="drop-arrow">
+                                                            <span class="drop-left"></span>
+                                                            <span class="drop-right"></span>
+                                                        </div>
+                                                    </span>
+                                                </a>
+                                                <ul class="gnb-sub">
+                                                    <li class="gnb-sub-item">
+                                                        <a href="video.html" class="focus-sub">비디오 템플릿</a>
+                                                    </li>
+                                                    <li class="gnb-sub-item">
+                                                        <a href="card.html">카드뉴스 템플릿</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="subscribe-year.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/subscribe.svg" alt="구독하기">구독하기
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="notice.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/notice.svg" alt="공지사항">공지사항
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="qa-list.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/service-center.svg" alt="고객센터">고객센터
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item guide-gnb">
+                                                <a href="guide.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/guide-icon.svg" alt="사용 가이드">사용 가이드
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 컨텐츠 영역 -->
+                <section class="content-area">
+                    <article class="content-wrap">
+                        <div class="content-inner edit-inner">
+                            <!-- 제목 및 브라우저 컨트롤 버튼 -->
+                            <div class="video-header">
+                                <h3 class="video-title">
+                                    <span class="title-text font-IBM">제목 : </span>
+                                    <span class="user-video-title font-IBM">로우하이 -- vs -- 큐지</span>
+                                </h3>
+
+                                <ul class="controls">
+                                    <li class="controls-item">
+                                        <button type="button" class="controlsBtn refreshBtn">
+                                            <img src="img/refresh-icon.svg" alt="새로고침 아이콘"> 새로고침
+                                        </button>
+                                    </li>
+                                    <li class="controls-item">
+                                        <button type="button" class="controlsBtn backBtn">
+                                            <img src="img/back-icon.svg" alt="뒤로 아이콘"> 뒤로
+                                        </button>
+                                    </li>
+                                    <li class="controls-item">
+                                        <button type="button" class="controlsBtn nextBtn">
+                                            <img src="img/next-icon.svg" alt="앞으로 아이콘"> 앞으로
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 탭 -->
+                            <ul class="tab-view video-tab m-top40">
+                                <li class="tab-active tab-item">
+                                    <a href="video-edit1.html" class="tab-active">자막 스타일</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit2.html" class="tab-link">제목 스타일</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit3.html" class="tab-link">레이아웃 스타일</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit4.html" class="tab-link">스타일 업로드</a>
+                                </li> 
+                            </ul>
+
+                            <div class="content-item edit1-item m-top40">
+                                <div class="edit-title font-IBM">"원하는대로 자막을 편집해보세요 !"</div>
+                                <div class="content-item edit-content flex wrap m-top20">
+                                    <!-- 자막 편집 -->
+                                    <div class="subtitle-wrap">
+                                        <!-- 편집 선택 박스 -->
+                                        <div class="edit-item-wrap">
+                                            <!-- 자막효과 -->
+                                            <div class="edit-item flex wrap">
+                                                <h4 class="subtitle-edit-title">자막 효과</h4>
+                                                <ul class="subtitle-effect-wrap wrap justify-start m-top10">
+                                                    <li class="subtitle-effect-item">
+                                                        <button type="button" class="effectBtn">
+                                                            <img src="img/edit/none-icon.svg" alt="효과없음">
+                                                        </button>
+                                                        <span class="effectBtn-text">효과없음</span>
+                                                    </li>
+                                                    <li class="subtitle-effect-item">
+                                                        <button type="button" class="effectBtn b-show">
+                                                            <img src="img/edit/bounce-icon.svg" alt="바운스">
+                                                        </button>
+                                                        <span class="effectBtn-text">바운스</span>
+                                                    </li>
+                                                    <li class="subtitle-effect-item">
+                                                        <button type="button" class="effectBtn">
+                                                            <img src="img/edit/pop-icon.svg" alt="팝">
+                                                        </button>
+                                                        <span class="effectBtn-text">팝</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- 효과색상 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">효과 색상</h4>
+                                                <div class="select-container">
+                                                    <div class="select-wrap">
+                                                        <div class="select-view">
+                                                            연두색 <img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                        </div>
+                                                        <div class="select selectNone">
+                                                            <!-- 선택되는 값 effectWrod 클래스 컬러 변경 -->
+                                                            <div class="option">하얀색</div>
+                                                            <div class="option">노란색</div>
+                                                            <div class="option">빨간색</div>
+                                                            <div class="option m-btm0 view-option">연두색</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="picker-container">
+                                                    <label for="effect-color-picker" class="none">자막 색상 선택</label>
+                                                    <input class="color-picker" type="color" id="effect-color-picker" name="color" value="#2fff00">
+                                                </div> -->
+                                            </div>
+                                            <!-- 폰트 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">폰트</h4>
+                                                <div class="flex font-edit-wrap wrap">
+                                                    <div class="select-container">
+                                                        <div class="select-wrap">
+                                                            <div class="select-view">
+                                                                pretendard <img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                            </div>
+                                                            <div class="select selectNone">
+                                                                <div class="option view-option">pretendard</div>
+                                                                <div class="option m-btm0">BMJua</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="number-container">
+                                                        <div class="number-wrap w-fit">
+                                                            <label class="none">폰트 사이즈</label>
+                                                            <input class="number-input" type="number" placeholder="16">
+                                                            <button class="downBtn numberBtn"> - </button>
+                                                            <button class="upBtn numberBtn"> + </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 폰트 컬러 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">폰트 컬러</h4>
+                                                <div class="select-container">
+                                                    <div class="select-wrap">
+                                                        <div class="select-view">
+                                                            노란색 <img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                        </div>
+                                                        <div class="select selectNone">
+                                                            <!-- 선택되는 값 font-color 클래스 컬러 변경 -->
+                                                            <div class="option">하얀색</div>
+                                                            <div class="option view-option">노란색</div>
+                                                            <div class="option">빨간색</div>
+                                                            <div class="option m-btm0">연두색</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="picker-container">
+                                                    <label for="font-color-picker" class="none">자막 색상 선택:</label>
+                                                    <input class="color-picker font-color-picker" type="color" id="font-color-picker" name="color" value="#ffe100">
+                                                </div> -->
+                                            </div>
+                                            <!-- 테두리 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">테두리</h4>
+                                                <div class="select-container">
+                                                    <div class="select-wrap">
+                                                        <div class="select-view">
+                                                            있음<img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                        </div>
+                                                        <div class="select selectNone">
+                                                            <div class="option view-option">있음</div>
+                                                            <div class="option m-btm0">없음</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 자막 단위 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">자막 단위</h4>
+                                                <div class="select-container">
+                                                    <div class="select-wrap">
+                                                        <div class="select-view">
+                                                            긴 자막<img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                        </div>
+                                                        <div class="select selectNone">
+                                                            <div class="option view-option">긴 자막</div>
+                                                            <div class="option m-btm0">짧은 자막</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 자막 위치 -->
+                                            <div class="edit-item m-top20 flex wrap">
+                                                <h4 class="subtitle-edit-title">자막 위치</h4>
+                                                <div class="edit-wrap flex wrap">
+                                                    <div class="select-container">
+                                                        <div class="select-wrap">
+                                                            <div class="select-view">
+                                                                하단<img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">
+                                                            </div>
+                                                            <div class="select selectNone">
+                                                                <div class="option">상단</div>
+                                                                <div class="option">중단</div>
+                                                                <div class="option m-btm0 view-option">하단</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range-container m-top10">
+                                                        <input class="range-input" type="range" id="subtitle-range" min="0" max="100" value="50">
+                                                        <div class="range-text flex">
+                                                            <span>아래</span>
+                                                            <span>위</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 전체 자막 박스 -->
+                                        <div class="subtitle-edit-wrap m-top20">
+                                            <div class="subtitle-container">
+                                                <ul class="edit-menu">
+                                                    <li class="edit edit-menu-item">
+                                                        <img src="img/edit/edit-btn.svg" alt="자막 편집 버튼">
+                                                    </li>
+                                                    <li class="delete edit-menu-item">
+                                                        <img src="img/edit/delet-btn.svg" alt="자막 삭제 버튼">
+                                                    </li>
+                                                    <li class="color-change edit-menu-item">
+                                                        <!-- 기본 컬러칩 (색상 선택을 표시) -->
+                                                        <div class="color-panel">
+                                                            <ul id="color-picker" class="color-picker edit-picker flex">
+                                                                <li class="lightGreen-chip color-chip"></li>
+                                                                <li class="red-chip color-chip"></li>
+                                                                <li class="yellow-chip color-chip"></li>
+                                                                <li class="white-chip color-chip"></li>
+                                                            </ul>
+                                                            <!--
+                                                                <div class="color-panel">
+                                                                    <label for="color-picker" class="none">자막 색상 선택:</label>
+                                                                    <input class="color-picker edit-picker" type="color" id="color-picker" name="color"> 
+                                                                </div>
+                                                            -->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="word-wrap">
+                                                    <span class="word" data-index="1">안녕하세요,</span>
+                                                    <span class="word" data-index="2">여러분!</span>
+                                                    <span class="word" data-index="3">오늘은</span>
+                                                    <span class="word" data-index="4">자막</span>
+                                                    <span class="word" data-index="5">색상</span>
+                                                    <span class="word" data-index="6">변경</span>
+                                                    <span class="word" data-index="7">기능을</span>
+                                                    <span class="word" data-index="8">소개합니다.</span>
+                                                    <span class="word" data-index="9">바이럴을</span>
+                                                    <span class="word" data-index="10">활용하여</span>
+                                                    <span class="word" data-index="11">여러분만의</span>
+                                                    <span class="word" data-index="12">개성있는</span>
+                                                    <span class="word" data-index="13">숏폼을</span>
+                                                    <span class="word" data-index="14">제작해보세요.</span>
+                                                    <span class="word" data-index="15">긴 영상도</span>
+                                                    <span class="word" data-index="16">클릭</span>
+                                                    <span class="word" data-index="17">한</span>
+                                                    <span class="word" data-index="18">번으로</span>
+                                                    <span class="word" data-index="19">빠르게</span>
+                                                    <span class="word" data-index="20">영상을</span>
+                                                    <span class="word" data-index="21">만들</span>
+                                                    <span class="word" data-index="22">수</span>
+                                                    <span class="word" data-index="23">있습니다.</span>
+                                                    <span class="word" data-index="24">안녕하세요,</span>
+                                                    <span class="word" data-index="25">여러분!</span>
+                                                    <span class="word" data-index="26">오늘은</span>
+                                                    <span class="word" data-index="27">자막</span>
+                                                    <span class="word" data-index="28">색상</span>
+                                                    <span class="word" data-index="29">변경</span>
+                                                    <span class="word" data-index="30">기능을</span>
+                                                    <span class="word" data-index="31">소개합니다.</span>
+                                                    <span class="word" data-index="32">바이럴을</span>
+                                                    <span class="word" data-index="33">활용하여</span>
+                                                    <span class="word" data-index="34">여러분만의</span>
+                                                    <span class="word" data-index="35">개성있는</span>
+                                                    <span class="word" data-index="36">숏폼을</span>
+                                                    <span class="word" data-index="37">제작해보세요.</span>
+                                                    <span class="word" data-index="38">긴 영상도</span>
+                                                    <span class="word" data-index="39">클릭</span>
+                                                    <span class="word" data-index="40">한</span>
+                                                    <span class="word" data-index="41">번으로</span>
+                                                    <span class="word" data-index="42">빠르게</span>
+                                                    <span class="word" data-index="43">영상을</span>
+                                                    <span class="word" data-index="44">만들</span>
+                                                    <span class="word" data-index="45">수</span>
+                                                    <span class="word" data-index="46">있습니다.</span>
+                                                    <span class="word" data-index="47">안녕하세요,</span>
+                                                    <span class="word" data-index="48">여러분!</span>
+                                                    <span class="word" data-index="49">오늘은</span>
+                                                    <span class="word" data-index="50">자막</span>
+                                                    <span class="word" data-index="51">색상</span>
+                                                    <span class="word" data-index="52">변경</span>
+                                                    <span class="word" data-index="53">기능을</span>
+                                                    <span class="word" data-index="54">소개합니다.</span>
+                                                    <span class="word" data-index="55">바이럴을</span>
+                                                    <span class="word" data-index="56">활용하여</span>
+                                                    <span class="word" data-index="57">여러분만의</span>
+                                                    <span class="word" data-index="58">개성있는</span>
+                                                    <span class="word" data-index="59">숏폼을</span>
+                                                    <span class="word" data-index="60">제작해보세요.</span>
+                                                    <span class="word" data-index="61">긴 영상도</span>
+                                                    <span class="word" data-index="62">클릭</span>
+                                                    <span class="word" data-index="63">한</span>
+                                                    <span class="word" data-index="64">번으로</span>
+                                                    <span class="word" data-index="65">빠르게</span>
+                                                    <span class="word" data-index="66">영상을</span>
+                                                    <span class="word" data-index="67">만들</span>
+                                                    <span class="word" data-index="68">수</span>
+                                                    <span class="word" data-index="69">있습니다.</span>
+                                                    <span class="word" data-index="71">안녕하세요,</span>
+                                                    <span class="word" data-index="72">여러분!</span>
+                                                    <span class="word" data-index="73">오늘은</span>
+                                                    <span class="word" data-index="74">자막</span>
+                                                    <span class="word" data-index="75">색상</span>
+                                                    <span class="word" data-index="76">변경</span>
+                                                    <span class="word" data-index="77">기능을</span>
+                                                    <span class="word" data-index="78">소개합니다.</span>
+                                                    <span class="word" data-index="79">바이럴을</span>
+                                                    <span class="word" data-index="80">활용하여</span>
+                                                    <span class="word" data-index="81">여러분만의</span>
+                                                    <span class="word" data-index="82">개성있는</span>
+                                                    <span class="word" data-index="83">숏폼을</span>
+                                                    <span class="word" data-index="84">제작해보세요.</span>
+                                                    <span class="word" data-index="85">긴 영상도</span>
+                                                    <span class="word" data-index="86">클릭</span>
+                                                    <span class="word" data-index="87">한</span>
+                                                    <span class="word" data-index="88">번으로</span>
+                                                    <span class="word" data-index="89">빠르게</span>
+                                                    <span class="word" data-index="90">영상을</span>
+                                                    <span class="word" data-index="91">만들</span>
+                                                    <span class="word" data-index="92">수</span>
+                                                    <span class="word" data-index="93">있습니다.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 미리보기 박스 -->
+                                    <div class="edit-preview preview-wrap">
+                                        <div class="template-box">
+                                            <div class="templaete-img template-fit">
+                                                <div class="mockup-img edit1-mockup-img">
+                                                    <img class="img-item" src="img/template/iphone-mockup.png" alt="아이폰 목업">
+                                                    <!-- 제목, 선택한 레이아웃 비율, 자막 컨텐츠 -->
+                                                    <div class="mockup-content edit1-mockup">
+                                                        <div class="mock-title mockup-content-item">
+                                                            <div class="user-title">로우하이 -- vs -- 큐지</div>
+                                                        </div>
+                                                        <div class="mock-ratio mockup-content-item mockup-content-video ratio16-item">
+                                                            <!-- !!!!! 레이아웃 비율에 따라 값 변경  >>
+                                                            16:9 = ratio16-item / 1:1 = ratio1-item / 9:16 = ratio9-item 
+                                                            -->
+                                                            <video class="user-video" src="img/videos/sample-video.mp4" autoplay muted loop></video>
+                                                        </div>
+                                                        <div class="mock-subTitle mockup-content-item bottom-subTitle">
+                                                            <!-- 자막위치: 상단 시 top-subTitle / 중단 시 middle-subTitle / 하단 시 bottom-subTitle -->
+                                                            <div class="user-subtitle long-subtitle font-color">
+                                                            <!-- 짧은 자막 시 short-subtitle / 긴 자막 시 long-subtitle / 폰트 컬러 선택 시 font-color -->
+                                                                <span class="word stokeWrod effectWrod">안녕하세요,</span>
+                                                                <!-- 바운스 효과 시 effectWrod / 테두리 있음 시 stokeWrod -->
+                                                                <span class="word">여러분!</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 워터마크 -->
+                                                        <div class="watermark-img">
+                                                            <img src="img/watermark.svg" alt="워터마크 이미지">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- 워터마크 제거 버튼 -->
+                                                    <div class="watermark-d-container">
+                                                        <button class="watermark-deleteBtn" id="openSubscribeModal" type="button">
+                                                            <img class="watermark-d-img" src="img/edit/watermark.svg" alt="워터마크 제거 버튼">
+                                                        </button>
+                                                        <span class="watermark-delete-text">워터마크 제거</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="templateBtn-wrap">
+                                    <button type="button" class="templaeteBtn" onclick="window.location.href='projectV-complete.html'">저장하기</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </article>
+                    
+                    <!-- 영상 재생 영역 >> !! 주석 처리 부분 : 추후 추가 될 기능 -->
+                    <article class="reprodct-area m-top50">
+                        <div class="reprodct-control">
+                            <div class="video-time flex justify-center"> 
+                                <!-- <div class="video-time-text flex">
+                                    <span class="video-time-item start-time">00:00</span>
+                                    <span class="video-time-item">/</span>
+                                    <span class="video-time-item length-time">00:21</span>
+                                </div> -->
+                                <div class="control-btn-wrap flex">
+                                    <!-- <div class="speed-btn-container">
+                                        <button class="speedBtn reprodctBtn flex" type="button">
+                                            <img src="img/edit/speed-btn.svg" alt="배속 버튼 아이콘">1.0 배속
+                                        </button>
+                                    </div> -->
+                                    <div class="reprodct-btn-container">
+                                        <button class="playBtn reprodctBtn flex" type="button">
+                                            <img src="img/edit/play-btn.svg" alt="재생/멈춤 버튼">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- <div class="video-edit-control">
+                                    <ul class="controls">
+                                        <li class="controls-item">
+                                            <button type="button" class="controlsBtn">
+                                                <img src="img/edit/revert-btn.svg" alt="되돌리기 버튼"> 되돌리기
+                                            </button>
+                                        </li>
+                                        <li class="controls-item">
+                                            <button type="button" class="controlsBtn">
+                                                <img src="img/edit/cut-btn.svg" alt="자르기 버튼"> 자르기
+                                            </button>
+                                        </li>
+                                        <li class="controls-item">
+                                            <button type="button" class="controlsBtn">
+                                                <img src="img/edit/delete-btn-black.svg" alt="삭제 버튼"> 삭제
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <!-- 새로고침 클릭 확인 모달창 -->
+        <div class="refresh-check-pop pop-wrap hide-pop">
+            <div class="pop-inner">
+                <p class="pop-text">
+                    초기화 하시겠습니까?
+                    <span class="pop-text-caption">초기화를 진행하면 수정 중인 모든 스타일 적용이 취소됩니다.</span>
+                </p>
+                <div class="popBtn-wrap">
+                    <div class="popBtn01 popBtn-item">
+                        <button class="noBtn" type="button">취소하기</button>
+                    </div>
+                    <div class="popBtn02 popBtn-item ">
+                        <button class="yesBtn" type="button">초기화하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 구독 모달 -->
+        <div class="subscribe-modal" id="subscribeModal">
+            <div class="modal-content">
+                <button type="button" class="close-btn" id="closeModal">×</button>
+                <h2 class="semibold-50">숏폼의 퀄리티를<br> 더 높여보세요.</h2>
+                <p class="medium-16">바이럴 유료 플랜을 구독하여 다음 기능들을 이용해 보세요.</p>
+                <div class="subscribe-content">
+                    <div class="flex-100">
+                        <div class="subscribe-bg">더 많은<br>
+                            <span class="text-purple">변환 횟수</span>
+                        </div>
+                        <div class="subscribe-bg"><span class="text-purple">워터마크</span><br>
+                            제거
+                        </div>
+                    </div>
+                    <div class="flex-100">
+                        <div class="subscribe-bg">AI 영상 업로드<br>
+                            정보 제공
+                        </div>
+                        <div class="subscribe-bg">영상 배경<br>
+                            업로드 지원
+                        </div>
+                    </div>
+                </div>
+                <div class="templateBtn-wrap">
+                    <button type="button" class="radius-10 templaeteBtn" id="openModal" onclick="location.href='/subscribe-year.html'">자세히 알아보기</button>
+                </div>
+            </div>
+        </div>  
+
+        <footer id="footer" class="footer">
+            <div class="content">
+                <div class="footer-info01 footer-info">
+                    <div class="inner">
+                        <div class="company-info">
+                            <ul class="info info01">
+                                <li>(주)바이럴</li>
+                                <li>대표 : 가나다</li>
+                                <li class="info-mg">주소 : 서울특별시 서울구 서울로 123 가나다라타워 3층 바이럴</li>
+                                <li>사업자등록번호 : 000 - 00 - 00000</li>
+                                <li class="info-mg">통신판매업 신고번호 : 제 0000 - 서울서울 - 0000호</li>
+                                <li>
+                                    abcdefg@gmail.com
+                                    <span>010-0101-0101</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="site-map">
+                            <ul class="site">
+                                <li>
+                                    <a href="#">프로젝트</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 영상</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 카드뉴스</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">비디오 템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">카드뉴스 템플릿</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">구독하기</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">고객센터</a>
+                                </li>
+                            </ul>
+                        </ul><!-- //partner-site -->
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="footer-info02 footer-info">
+                    <div class="inner">
+                        <div class="left-content">
+                            <div class="footer-logo">
+                                <img src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </div>
+                            <div class="support-links">
+                                <div class="link" id="terms-btn">
+                                    <a href="#">이용약관</a>
+                                </div>
+                                <div class="link" id="privacy-btn">
+                                    <a href="#">개인정보처리방침</a>
+                                </div>
+                            </div><!-- //support-links -->
+                        </div>
+                        <div class="copyright">
+                            ©Viral 2025 All rights reserved.
+                        </div>
+                    </div>
+                </div><!-- //footer-info01 -->
+            </div>
+            
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            //--- 자막 
+            document.querySelectorAll(".effectBtn").forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    // 모든 버튼에서 b-show 제거
+                    document.querySelectorAll(".effectBtn").forEach((btn) => {
+                        btn.classList.remove("b-show");
+                    });
+
+                    // 클릭한 버튼에만 b-show 추가
+                    event.currentTarget.classList.add("b-show");
+                });
+            });
+
+            // 자막 편집
+            const wordWrap = document.querySelector(".word-wrap");
+            const editMenu = document.querySelector(".edit-menu");
+            const colorPicker = document.getElementById("color-picker");
+
+            let selectedWord = null;
+
+            // 이벤트 위임을 사용하여 단어 클릭 처리
+            wordWrap.addEventListener("click", (event) => {
+                if (event.target.classList.contains("word")) {
+                    if (selectedWord) {
+                        selectedWord.classList.remove("selected");
+                    }
+
+                    selectedWord = event.target;
+                    selectedWord.classList.add("selected");
+
+                    // 선택된 단어의 현재 색상을 컬러 선택기에 반영
+                    let currentColor = window.getComputedStyle(selectedWord).color;
+                    colorPicker.value = rgbToHex(currentColor);
+
+                    // 편집 메뉴 위치 조정
+                    const rect = selectedWord.getBoundingClientRect();
+                    editMenu.classList.add("show-edit-menu");
+                    editMenu.style.top = `${window.scrollY + rect.bottom + 4}px`;
+                    editMenu.style.left = `${window.scrollX + rect.left}px`;
+                }
+            });
+
+            // 컬러칩 클릭 시 색상 변경
+            document.querySelectorAll(".color-chip").forEach((chip) => {
+                chip.addEventListener("click", (event) => {
+                    if (selectedWord) {
+                        const color = window.getComputedStyle(event.target).backgroundColor; // 칩 색상 가져오기
+                        selectedWord.style.color = color; // 선택된 단어 색상 변경
+                    }
+                });
+            });
+
+            // 편집 버튼 클릭 시 내용 수정 가능하도록 설정
+            document.querySelector(".edit").addEventListener("click", () => {
+                if (selectedWord) {
+                    selectedWord.contentEditable = true;
+                    selectedWord.focus();
+
+                    // Enter 키 입력 시 편집 종료
+                    selectedWord.addEventListener("keydown", handleEnterKey);
+                }
+            });
+
+            // Enter 키 이벤트 처리
+            function handleEnterKey(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // 문단 나눠지는 기본 동작 방지
+                    selectedWord.contentEditable = false;
+                    selectedWord.classList.remove("selected");
+                    selectedWord.removeEventListener("keydown", handleEnterKey); // 이벤트 제거
+                    editMenu.classList.remove("show-edit-menu"); // 편집 메뉴 숨기기
+                }
+            }
+
+            // 삭제 버튼 클릭 시 단어 삭제
+            document.querySelector(".delete").addEventListener("click", () => {
+                if (selectedWord) {
+                    selectedWord.remove();
+                    editMenu.classList.remove("show-edit-menu"); // 편집 메뉴 숨기기
+                    selectedWord = null;
+                }
+            });
+
+            // 외부 클릭 시 메뉴 숨기기
+            document.addEventListener("click", (event) => {
+                if (!editMenu.contains(event.target) && !wordWrap.contains(event.target)) {
+                    if (selectedWord) {
+                        selectedWord.contentEditable = false;
+                        selectedWord.classList.remove("selected");
+                        selectedWord.style.borderBottom = "none"; // 포커스 효과 제거
+                        selectedWord.removeEventListener("keydown", handleEnterKey); // 이벤트 제거
+                    }
+                    editMenu.classList.remove("show-edit-menu"); // 편집 메뉴 숨기기
+                }
+            });
+
+            // RGB → HEX 변환 함수
+            function rgbToHex(rgb) {
+                const rgbArray = rgb.match(/\d+/g).map(Number);
+                return `#${rgbArray.map(x => x.toString(16).padStart(2, "0")).join("")}`;
+            }
+
+
+
+
+            //--- 셀렉트 박스
+            const selectWraps = document.querySelectorAll(".select-wrap");
+
+            selectWraps.forEach((wrap) => {
+                const selectView = wrap.querySelector(".select-view");
+                const selectDropdown = wrap.querySelector(".select");
+
+                selectView.addEventListener("click", (event) => {
+                    event.stopPropagation(); // 클릭 이벤트 전파 방지
+
+                    // 모든 드롭다운 닫기 (현재 선택한 드롭다운 제외)
+                    document.querySelectorAll(".select").forEach((dropdown) => {
+                        if (dropdown !== selectDropdown) {
+                            dropdown.classList.add("selectNone");
+                        }
+                    });
+
+                    // 클릭한 드롭다운만 토글
+                    selectDropdown.classList.toggle("selectNone");
+                });
+
+                // 옵션 선택 시 드롭다운 닫기
+                selectDropdown.querySelectorAll(".option").forEach((option) => {
+                    option.addEventListener("click", () => {
+                        // 이전에 선택된 옵션에서 .view-option 클래스 제거
+                        selectDropdown.querySelectorAll(".option").forEach((opt) => {
+                            opt.classList.remove("view-option");
+                        });
+
+                        // 새로운 옵션에 .view-option 클래스 추가
+                        option.classList.add("view-option");
+
+                        // select-view의 텍스트를 선택된 옵션으로 업데이트
+                        selectView.innerHTML = `${option.textContent} <img class="drop-icon" src="img/drop-icon.svg" alt="드롭 아이콘">`;
+
+                        // 드롭다운 닫기
+                        selectDropdown.classList.add("selectNone");
+                    });
+                });
+            });
+
+            // 다른 곳을 클릭하면 모든 드롭다운 닫기
+            document.addEventListener("click", () => {
+                document.querySelectorAll(".select").forEach((dropdown) => {
+                    dropdown.classList.add("selectNone");
+                });
+            });
+
+
+
+
+            //--- 넘버 박스
+            document.querySelector(".upBtn").addEventListener("click", function () {
+                let input = document.querySelector(".number-input");
+                input.value = parseInt(input.value) + 1;
+            });
+
+            document.querySelector(".downBtn").addEventListener("click", function () {
+                let input = document.querySelector(".number-input");
+                input.value = Math.max(0, parseInt(input.value) - 1);
+            });
+
+
+
+            //---랜지 인풋 게이지
+            const rangeInput = document.querySelector(".range-input");
+
+            function updateRangeStyle() {
+                const min = rangeInput.min;
+                const max = rangeInput.max;
+                const val = rangeInput.value;
+
+                const percentage = ((val - min) / (max - min)) * 100;
+                rangeInput.style.setProperty("--progress", `${percentage}%`);
+            }
+
+            rangeInput.addEventListener("input", updateRangeStyle);
+            updateRangeStyle(); // 초기화
+
+
+
+            //--- 재생/멈춤 버튼 클릭 시 이미지 경로 변경
+            document.querySelector(".playBtn").addEventListener("click", (event) => {
+                const img = event.currentTarget.querySelector("img");
+                
+                // 현재 버튼 이미지가 재생 버튼인 경우
+                if (img.src.includes("play-btn.svg")) {
+                    img.src = "img/edit/pause-btn.svg"; // 멈춤 버튼 이미지로 변경
+                } else {
+                    img.src = "img/edit/play-btn.svg"; // 재생 버튼 이미지로 변경
+                }
+            });
+
+
+
+            //--- 새로고침 모달 팝업
+            // 삭제 버튼 클릭 시, 삭제 확인 모달 열기
+            document.querySelectorAll('.refreshBtn').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelector('.refresh-check-pop').classList.remove('hide-pop');
+                });
+            });
+
+            // 삭제 확인 모달에서 '아니오' 버튼 클릭 시 삭제 로직 실행
+            document.querySelector('.refresh-check-pop .noBtn').addEventListener('click', function() {
+                // 모달 닫기
+                document.querySelector('.refresh-check-pop').classList.add('hide-pop');
+            });
+
+            // 삭제 확인 모달에서 '아니오' 버튼 클릭 시 모달 닫기
+            document.querySelector('.refresh-check-pop .noBtn').addEventListener('click', function() {
+                document.querySelector('.refresh-check-pop').classList.add('hide-pop');
+            });
+
+
+
+
+            //--- 구독 모달 팝업
+            const openModalBtn = document.getElementById("openSubscribeModal"); // 워터마크 제거 버튼
+            const closeModalBtn = document.getElementById("closeModal"); // 닫기 버튼
+            const modal = document.getElementById("subscribeModal"); // 모달창
+
+            // 모달 열기
+            openModalBtn.addEventListener("click", function () {
+                modal.classList.add("show");
+            });
+
+            // 모달 닫기
+            closeModalBtn.addEventListener("click", function () {
+                modal.classList.remove("show");
+            });
+
+            // 모달 바깥 영역 클릭 시 닫기
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.classList.remove("show");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

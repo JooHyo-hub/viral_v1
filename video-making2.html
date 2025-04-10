@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+    <title>Viral | 비디오 생성</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section id="home">
+        <header id="header" class="header sub-header">
+            <div class="inner">
+                <div class="content">
+                    <div class="left-content">
+                        <!-- offcanvas-open 로그인 후 보여짐 -->
+                        <button type="button" class="offcanvas-open"> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <h1 class="logo">
+                            <a href="index.html">
+                                <img class="logo-img" src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </a>
+                        </h1>
+                        <span class="beta-badge">Beta</span>
+                    </div>
+
+                    <!-- log-befor 로그인 전 보여짐 -->
+                    <ul class="right-content log-befor">
+                        <li>
+                            <a class="loginBtn" href="login.html">로그인</a>
+                        </li> 
+                        <li>
+                            <a class="signupBtn" href="register-hp.html">회원가입</a>
+                        </li>
+                    </ul>
+                    <!-- log-after 로그인 후 보여짐 -->
+                    <ul class="right-content log-after">
+                        <li>
+                            <a class="guideBtn after-item" href="guide.html">
+                                <img src="img/hd-guide.svg" alt="사용가이드 아이콘"> 사용 가이드
+                            </a>
+                        </li> 
+                        <li>
+                            <a class="countBadge after-item" href="#">
+                                <img src="img/time-count.svg" alt="무료 횟수 카운트"> 5/5
+                            </a>
+                        </li>
+                        <li class="add-icon">
+                            <div class="circle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="add-item">
+                                <div class="item">
+                                    <a href="subscrib-info.html">구독정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="info.html">내 정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="index.html">로그아웃</a>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main id="main" class="main">
+            <div class= "inner"> 
+                <!-- 메뉴 영역 -->
+                <section class="menu-area">
+                    <div class="content">
+                        <div class="offcanvas-wrap">
+                            <div class="offcanvas">
+                                <div class="offcanvas-body">
+                                    <nav id="nav">
+                                        <ul class="gnb">
+                                            <li class="gnb-item">
+                                                <a href="my-project.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/my-project.svg" alt="내 프로젝트">내 프로젝트
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item gnb-training">
+                                                <a href="#" class="focusGnb">
+                                                    <span class="gnb-txt-cont">
+                                                        <div class="gnb-txt gnb-focus-txt">
+                                                            <img src="img/menu/template-atv.svg" alt="템플릿"> 템플릿
+                                                        </div>
+                                                        <div class="drop-arrow">
+                                                            <span class="drop-left"></span>
+                                                            <span class="drop-right"></span>
+                                                        </div>
+                                                    </span>
+                                                </a>
+                                                <ul class="gnb-sub">
+                                                    <li class="gnb-sub-item">
+                                                        <a href="video.html" class="focus-sub">비디오 템플릿</a>
+                                                    </li>
+                                                    <li class="gnb-sub-item">
+                                                        <a href="card.html">카드뉴스 템플릿</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="subscribe-year.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/subscribe.svg" alt="구독하기">구독하기
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="notice.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/notice.svg" alt="공지사항">공지사항
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="qa-list.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/service-center.svg" alt="고객센터">고객센터
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item guide-gnb">
+                                                <a href="guide.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/guide-icon.svg" alt="사용 가이드">사용 가이드
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 컨텐츠 영역 -->
+                <section class="content-area">
+                    <article class="content-wrap">
+                        <div class="content-inner making2-inner">
+                            <!-- 비디오 재생 및 해상도 선택 -->
+                            <div class="media-frame flex">
+                                <div class="vedio-thum media-item">
+                                    <video class="user-video" src="img/videos/sample-video.mp4"></video>
+                                </div>
+                                <div class="resolution-container media-item">
+                                    <ul class="resolution-wrap flex">
+                                        <li class="sdBtn resolutionBtn flex b2-show" type="button">
+                                            <span class="font-IBM">SD</span>
+                                            <div class="resolution-text">
+                                                <span class="resolution-numb block">360p</span>
+                                                <span class="resolution-cap block">표준화질, 빠른 변환</span>
+                                            </div>
+                                        </li>
+                                        <li class="sdBtn resolutionBtn flex" type="button">
+                                            <span class="font-IBM">HD</span>
+                                            <div class="resolution-text">
+                                                <span class="resolution-numb block">720p</span>
+                                                <span class="resolution-cap block">고화질, 더 선명한 영상</span>
+                                            </div>
+                                        </li>
+                                        <li class="sdBtn resolutionBtn flex" type="button">
+                                            <span class="font-IBM">FHD</span>
+                                            <div class="resolution-text">
+                                                <span class="resolution-numb block">1080p</span>
+                                                <span class="resolution-cap block">최고화질 (<b class="bold">구독 서비스</b>)</span>
+                                            </div>
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </div>
+
+                            <!-- AI 자르기 / 셀프 자르기 -->
+                            <div class="cut-wrap">
+                                <!-- 자르기 방법 선택 -->
+                                <div class="cut-way-wrap flex">
+                                    <div class="cut-ai cut-item flex b2-show">
+                                        <span class="cut-icon">
+                                            <img class="cut-img" src="img/videoMaking/cut-ai.svg" alt="AI 자르기">
+                                        </span>
+                                        <ul class="cut-text">
+                                            <li class="cut-title cut-text-item">AI 자르기</li>
+                                            <li class="cut-cap cut-text-item">시청자의 관심을 살 수 있는 구간을 AI가 찾아내어 편집합니다.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="cut-slef cut-item flex">
+                                        <span class="cut-icon">
+                                            <img class="cut-img" src="img/videoMaking/cut-self.svg" alt="셀프 자르기">
+                                        </span>
+                                        <ul class="cut-text">
+                                            <li class="cut-title cut-text-item">셀프 자르기</li>
+                                            <li class="cut-cap cut-text-item">시청자에게 보일 내용을 목적에 맞게 구간을 설정시킵니다. (최대 5개)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 변환구간 -->
+                                <div class="cut-panel-wrap">
+                                    <div class="pannel-title">
+                                        변환 구간
+                                        <span class="block">숏폼으로 변환시킬 영상의 시간을 설정해주세요.</span>
+                                    </div>
+                                    <div class="pannel-container">
+                                        <!-- ai 자르기 변환 구간 -->
+                                        <div class="pannel-box ai-pannel">
+                                            <p class="time-limit">최소 5분 이상의 구간을 설정해주세요.</p>
+                                            <div class="pannel-time">
+                                                <span class="time-start">01:41</span>
+                                                <span class="time-end">02:06</span>
+                                            </div>
+                                            <div class="pannel-range">
+                                                <input class="start-range range-input" type="range" min="0" max="600" value="101" id="start-range1">
+                                                <input class="end-range range-input" type="range" min="0" max="600" value="126" id="end-range1">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 셀프 자르기 변환 구간 -->
+                                        <div class="slef-pannel none">
+                                            <div class="pannel-box">
+                                                <p class="time-limit">
+                                                    3분 미만의 시간을 설정해 주세요.
+                                                    <span class="pannel-delete">
+                                                        <img src="img/delete-icon.svg" alt="닫기">
+                                                    </span>
+                                                </p>
+                                                <div class="pannel-time">
+                                                    <span class="time-start">01:41</span>
+                                                    <span class="time-end">02:06</span>
+                                                </div>
+                                                <div class="pannel-range">
+                                                    <input class="start-range range-input" type="range" min="0" max="600" value="101" id="start-range2">
+                                                    <input class="end-range range-input" type="range" min="0" max="600" value="126" id="end-range2">
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="pannel-box">
+                                                <p class="time-limit">
+                                                    3분 미만의 시간을 설정해 주세요.
+                                                    <span class="pannel-delete">
+                                                        <img src="img/delete-icon.svg" alt="닫기">
+                                                    </span>
+                                                </p>
+                                                <div class="pannel-time">
+                                                    <span class="time-start">01:41</span>
+                                                    <span class="time-end">02:06</span>
+                                                </div>
+                                                <div class="pannel-range">
+                                                    <input class="start-range range-input" type="range" min="0" max="600" value="101" id="start-range2">
+                                                    <input class="end-range range-input" type="range" min="0" max="600" value="126" id="end-range2">
+                                                    <div class="progress-bar"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 설정 추가하기 버튼 // 클릭시 pannel-box가 나타남-->
+                                            <div class="addBtn-container">
+                                                <button class="addBtn b2-show flex" type="button">
+                                                    <span>
+                                                        <img src="img/add-icon.svg" alt="추가하기 아이콘">
+                                                    </span>
+                                                    설정 추가하기
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 내가 만든 템플릿 -->
+                            <div class="past-wrap template-wrap none">
+                                <div class="past-container">
+                                    <div class="title">내가 만든 템플릿</div>
+                                    <div class="past-item-container flex">
+                                        <!-- 템플릿1 -->
+                                        <div class="past-item template-box">
+                                            <div class="template-edit template-100 b2-show">
+                                                <div class="templaete-img">
+                                                    <img class="img-item" src="img/template/recent-img.png" alt="지난 템플릿1">
+                                                </div>
+                                            </div>
+                                            <div class="my-template-title">Dance battle</div>
+                                        </div>
+                                        <!-- 템플릿2 -->
+                                        <div class="past-item template-box">
+                                            <div class="template-edit template-100">
+                                                <div class="templaete-img">
+                                                    <img class="img-item" src="img/template/past-img2.png" alt="지난 템플릿2">
+                                                </div>
+                                            </div>
+                                            <div class="my-template-title">Dance battle</div>
+                                        </div>
+                                        <!-- 템플릿3 -->
+                                        <div class="past-item template-box">
+                                            <div class="template-edit template-100">
+                                                <div class="templaete-img">
+                                                    <img class="img-item" src="img/template/past-img2.png" alt="지난 템플릿2">
+                                                </div>
+                                            </div>
+                                            <div class="my-template-title">Dance battle</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="templateBtn-wrap flex">
+                                <div class="templateBtn-item none">
+                                    <button type="button" class="templaeteBtn backBtn">이전</button>
+                                </div>
+                                <div class="templateBtn-item">
+                                    <button type="button" class="templaeteBtn nextBtn">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <!--  템플릿 추가 이름 생성 모달창 -->
+        <!-- <div class="templaete-add-pop pop-wrap hide-pop">
+            <div class="pop-inner">
+                <label class="pop-text">템플릿 이름 생성</label>
+                <div class="pop-input">
+                    <input type="text" id="templateName" placeholder="템플릿 이름을 지정해주세요.">
+                </div>
+                <div class="popBtn-wrap">
+                    <div class="popBtn01 popBtn-item">
+                        <button class="noBtn" type="button">취소하기</button>
+                    </div>
+                    <div class="popBtn02 popBtn-item ">
+                        <button class="yesBtn" type="button" onclick="window.location.href='video-making.html'">생성하기</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <footer id="footer" class="footer">
+            <div class="content">
+                <div class="footer-info01 footer-info">
+                    <div class="inner">
+                        <div class="company-info">
+                            <ul class="info info01">
+                                <li>(주)바이럴</li>
+                                <li>대표 : 가나다</li>
+                                <li class="info-mg">주소 : 서울특별시 서울구 서울로 123 가나다라타워 3층 바이럴</li>
+                                <li>사업자등록번호 : 000 - 00 - 00000</li>
+                                <li class="info-mg">통신판매업 신고번호 : 제 0000 - 서울서울 - 0000호</li>
+                                <li>
+                                    abcdefg@gmail.com
+                                    <span>010-0101-0101</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="site-map">
+                            <ul class="site">
+                                <li>
+                                    <a href="#">프로젝트</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 영상</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 카드뉴스</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">비디오 템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">카드뉴스 템플릿</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">구독하기</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">고객센터</a>
+                                </li>
+                            </ul>
+                        </ul><!-- //partner-site -->
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="footer-info02 footer-info">
+                    <div class="inner">
+                        <div class="left-content">
+                            <div class="footer-logo">
+                                <img src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </div>
+                            <div class="support-links">
+                                <div class="link" id="terms-btn">
+                                    <a href="#">이용약관</a>
+                                </div>
+                                <div class="link" id="privacy-btn">
+                                    <a href="#">개인정보처리방침</a>
+                                </div>
+                            </div><!-- //support-links -->
+                        </div>
+                        <div class="copyright">
+                            ©Viral 2025 All rights reserved.
+                        </div>
+                    </div>
+                </div><!-- //footer-info01 -->
+            </div>
+            
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            //--- 변환 구간 설정 range
+            document.querySelectorAll(".pannel-box").forEach((pannel) => {
+                const rangeStart = pannel.querySelector(".start-range");
+                const rangeEnd = pannel.querySelector(".end-range");
+                const progressBar = pannel.querySelector(".progress-bar");
+                const startTimeDisplay = pannel.querySelector(".time-start");
+                const endTimeDisplay = pannel.querySelector(".time-end");
+
+                const minGap = 5 * 60; // 최소 간격 (5분 = 300초)
+
+                function updateSlider(event) {
+                    let startValue = parseInt(rangeStart.value);
+                    let endValue = parseInt(rangeEnd.value);
+
+                    startValue = parseInt(rangeStart.value);
+                    endValue = parseInt(rangeEnd.value);
+
+                    // progress bar 업데이트
+                    let percentStart = (startValue / rangeStart.max) * 100;
+                    let percentEnd = (endValue / rangeEnd.max) * 100;
+
+                    progressBar.style.left = percentStart + "%";
+                    progressBar.style.right = (100 - percentEnd) + "%";
+
+                    // 시간 표시 업데이트
+                    startTimeDisplay.textContent = formatTime(startValue);
+                    endTimeDisplay.textContent = formatTime(endValue);
+                }
+
+                function formatTime(seconds) {
+                    let minutes = Math.floor(seconds / 60);
+                    let secs = seconds % 60;
+                    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+                }
+
+                rangeStart.addEventListener("input", updateSlider);
+                rangeEnd.addEventListener("input", updateSlider);
+
+                // 초기 설정
+                updateSlider();
+            });
+
+
+            //--- ai자르기 / slef 자르기 클릭시 나타나느 변환구간
+            const cutAiBtn = document.querySelector(".cut-ai");
+            const cutSelfBtn = document.querySelector(".cut-slef");
+
+            const aiPannel = document.querySelector(".ai-pannel");
+            const selfPannel = document.querySelector(".slef-pannel");
+
+            function switchPanel(activeBtn, inactiveBtn, showPanel, hidePanel) {
+                // 활성화된 버튼에 'b2-show' 클래스 추가, 비활성화 버튼에서는 제거
+                activeBtn.classList.add("b2-show");
+                inactiveBtn.classList.remove("b2-show");
+
+                // 선택된 패널 표시, 다른 패널 숨기기
+                showPanel.classList.remove("none");
+                hidePanel.classList.add("none");
+            }
+
+            // AI 자르기 클릭 시
+            cutAiBtn.addEventListener("click", function () {
+                switchPanel(cutAiBtn, cutSelfBtn, aiPannel, selfPannel);
+            });
+
+            // 셀프 자르기 클릭 시
+            cutSelfBtn.addEventListener("click", function () {
+                switchPanel(cutSelfBtn, cutAiBtn, selfPannel, aiPannel);
+            });
+
+
+            //--- 이전, 다음 클릭시 나타나는 박스
+            const nextBtn = document.querySelector(".templaeteBtn.nextBtn");
+            const backBtn = document.querySelector(".templateBtn-item .backBtn");
+            const cutWrap = document.querySelector(".cut-wrap");
+            const pastWrap = document.querySelector(".making2-inner .past-wrap");
+            const backBtnContainer = document.querySelector(".templateBtn-item"); 
+
+            nextBtn.addEventListener("click", function () {
+                if (nextBtn.textContent === "생성하기") {
+                    window.location.href = "making-wait.html"; 
+                }
+
+                cutWrap.classList.add("none");  
+                pastWrap.classList.remove("none"); 
+                backBtnContainer.classList.remove("none"); 
+
+                // 다음 버튼의 텍스트를 '생성하기'로 변경
+                nextBtn.textContent = "생성하기";
+            });
+
+            backBtn.addEventListener("click", function () {
+                cutWrap.classList.remove("none"); 
+                pastWrap.classList.add("none"); 
+                backBtnContainer.classList.add("none"); 
+
+                nextBtn.textContent = "다음";
+            });
+
+            
+            //--- 해상도 버튼 클릭 시 포커스 효과
+            const resolutionBtns = document.querySelectorAll(".resolutionBtn");
+
+            resolutionBtns.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    // 모든 resolutionBtn에서 b2-show 클래스 제거
+                    resolutionBtns.forEach(b => b.classList.remove("b2-show"));
+
+                    // 클릭한 resolutionBtn에 b2-show 클래스 추가
+                    this.classList.add("b2-show");
+                });
+            });
+
+            //--- 내가 만든 템플릿 클릭 시 포커스 효과
+            const pastItems = document.querySelectorAll(".template-edit");
+
+            pastItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    // 모든 past-item에서 b2-show 클래스 제거
+                    pastItems.forEach(i => i.classList.remove("b2-show"));
+
+                    // 클릭한 past-item에 b2-show 클래스 추가
+                    this.classList.add("b2-show");
+                });
+            });
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+    <title>Viral | 비디오 템플릿 스타일 - 레이아웃</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <section id="home">
+        <header id="header" class="header sub-header">
+            <div class="inner">
+                <div class="content">
+                    <div class="left-content">
+                        <!-- offcanvas-open 로그인 후 보여짐 -->
+                        <button type="button" class="offcanvas-open"> 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <h1 class="logo">
+                            <a href="index.html">
+                                <img class="logo-img" src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </a>
+                        </h1>
+                        <span class="beta-badge">Beta</span>
+                    </div>
+
+                    <!-- log-befor 로그인 전 보여짐 -->
+                    <ul class="right-content log-befor">
+                        <li>
+                            <a class="loginBtn" href="login.html">로그인</a>
+                        </li> 
+                        <li>
+                            <a class="signupBtn" href="register-hp.html">회원가입</a>
+                        </li>
+                    </ul>
+                    <!-- log-after 로그인 후 보여짐 -->
+                    <ul class="right-content log-after">
+                        <li>
+                            <a class="guideBtn after-item" href="guide.html">
+                                <img src="img/hd-guide.svg" alt="사용가이드 아이콘"> 사용 가이드
+                            </a>
+                        </li> 
+                        <li>
+                            <a class="countBadge after-item" href="#">
+                                <img src="img/time-count.svg" alt="무료 횟수 카운트"> 5/5
+                            </a>
+                        </li>
+                        <li class="add-icon">
+                            <div class="circle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="add-item">
+                                <div class="item">
+                                    <a href="subscrib-info.html">구독정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="info.html">내 정보</a>
+                                </div>
+                                <div class="item">
+                                    <a href="index.html">로그아웃</a>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main id="main" class="main">
+            <div class= "inner"> 
+                <!-- 메뉴 영역 -->
+                <section class="menu-area">
+                    <div class="content">
+                        <div class="offcanvas-wrap">
+                            <div class="offcanvas">
+                                <div class="offcanvas-body">
+                                    <nav id="nav">
+                                        <ul class="gnb">
+                                            <li class="gnb-item">
+                                                <a href="my-project.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/my-project.svg" alt="내 프로젝트">내 프로젝트
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item gnb-training">
+                                                <a href="#" class="focusGnb">
+                                                    <span class="gnb-txt-cont">
+                                                        <div class="gnb-txt gnb-focus-txt">
+                                                            <img src="img/menu/template-atv.svg" alt="템플릿"> 템플릿
+                                                        </div>
+                                                        <div class="drop-arrow">
+                                                            <span class="drop-left"></span>
+                                                            <span class="drop-right"></span>
+                                                        </div>
+                                                    </span>
+                                                </a>
+                                                <ul class="gnb-sub">
+                                                    <li class="gnb-sub-item">
+                                                        <a href="video.html" class="focus-sub">비디오 템플릿</a>
+                                                    </li>
+                                                    <li class="gnb-sub-item">
+                                                        <a href="card.html">카드뉴스 템플릿</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="subscribe-year.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/subscribe.svg" alt="구독하기">구독하기
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="notice.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/notice.svg" alt="공지사항">공지사항
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item">
+                                                <a href="qa-list.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/service-center.svg" alt="고객센터">고객센터
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="gnb-item guide-gnb">
+                                                <a href="guide.html">
+                                                    <span class="gnb-txt">
+                                                        <img src="img/menu/guide-icon.svg" alt="사용 가이드">사용 가이드
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 컨텐츠 영역 -->
+                <section class="content-area">
+                    <article class="content-wrap">
+                        <div class="content-inner making-inner">
+                            <h3 class="content-title font-IBM">
+                                비디오 템플릿 스타일
+                                <span class="title-descript">제목 자막 스타일 및 영상 레이아웃, 배경색상을 직접 업로드하여 커스텀 영상을 제작하세요.</span>
+                            </h3>
+
+                            <!-- 탭 -->
+                            <ul class="tab-view video-tab">
+                                <li class="tab-active tab-item">
+                                    <a href="video-making.html" class="tab-active">레이아웃</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit3.html" class="tab-link">레이아웃 스타일</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit2.html" class="tab-link">제목 스타일</a>
+                                </li>
+                                <li class="tab-disb tab-item">
+                                    <a href="video-edit1.html" class="tab-link">자막 스타일</a>
+                                </li> 
+                            </ul>
+
+                            <div class="content-item template-item template-100">
+                                <!-- 템플릿 미리보기 -->
+                                <div class="preview-wrap template-wrap">
+                                    <div class="template-box">
+                                        <div class="templaete-img template-fit">
+                                            <div class="mockup-img">
+                                                <img class="img-item" src="img/template/iphone-mockup.png" alt="아이폰 목업">
+                                                <!-- 제목, 선택한 레이아웃 비율, 자막 컨텐츠 -->
+                                                <div class="mockup-content">
+                                                    <div class="mock-title mockup-content-item">
+                                                        <img class="titleImg" src="img/template/example-title.svg" alt="제목 예시 이미지">
+                                                    </div>
+                                                    <div class="mock-ratio mockup-content-item">
+                                                        <img class="exampleImg ratio16-item" src="img/template/example-img-16_9.png" alt="영상 예시 이미지">
+                                                    </div>
+                                                    <div class="mock-subTitle mockup-content-item bottom-subTitle">
+                                                        <img class="sub-titleImg" src="img/template/example-subtitle.svg" alt="자막 예시 이미지">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 템플릿 레이아웃 선택 -->
+                                <div class="template-wrap layout-wrap">
+                                    <div class="template-fit layout-box">
+                                        <!-- 레이아웃1 -->
+                                        <div class="layout-item template-box">
+                                            <a href="#" class="select-box ratio-16 b-show">
+                                                <div class="templaete-inner">
+                                                    <div class="templaete-img template-fit">
+                                                        <img class="img-item" src="img/template/layout-16_9.png" alt="레이아웃 비율 16:9">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="layout-descript">
+                                                <div class="ratio">16 : 9</div>
+                                                <div class="detail">
+                                                    글자가 더 돋보이고, 내용을 <br>
+                                                    온전히 보여줄 수 있습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 레이아웃2 -->
+                                        <div class="layout-item template-box">
+                                            <a href="#" class="select-box ratio-1">
+                                                <div class="templaete-inner">
+                                                    <div class="templaete-img template-fit">
+                                                        <img class="img-item" src="img/template/layout-1_1.png" alt="레이아웃 비율 1:1">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="layout-descript">
+                                                <div class="ratio">1 : 1</div>
+                                                <div class="detail">
+                                                    핵심 메시지를 전달하기 용이하고, <br>
+                                                    시각적 안정감을 줍니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 레이아웃3 -->
+                                        <div class="layout-item template-box">
+                                            <a href="#" class="select-box ratio-9">
+                                                <div class="templaete-inner">
+                                                    <div class="templaete-img template-fit">
+                                                        <img class="img-item" src="img/template/layout-9_16.png" alt="레이아웃 비율 9:16">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="layout-descript">
+                                                <div class="ratio">9 : 16</div>
+                                                <div class="detail">
+                                                    숏폼 최적화로, 더 높은 <br>
+                                                    시청 완료율을 얻을 수 있습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="templateBtn-wrap">
+                            <button type="button" class="templaeteBtn" onclick="window.location.href='video.html'">저장하기</button>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="content">
+                <div class="footer-info01 footer-info">
+                    <div class="inner">
+                        <div class="company-info">
+                            <ul class="info info01">
+                                <li>(주)바이럴</li>
+                                <li>대표 : 가나다</li>
+                                <li class="info-mg">주소 : 서울특별시 서울구 서울로 123 가나다라타워 3층 바이럴</li>
+                                <li>사업자등록번호 : 000 - 00 - 00000</li>
+                                <li class="info-mg">통신판매업 신고번호 : 제 0000 - 서울서울 - 0000호</li>
+                                <li>
+                                    abcdefg@gmail.com
+                                    <span>010-0101-0101</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="site-map">
+                            <ul class="site">
+                                <li>
+                                    <a href="#">프로젝트</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 영상</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">생성한 카드뉴스</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">비디오 템플릿</a>
+                                </li>
+                                <li class="sub-site">
+                                    <a href="#">카드뉴스 템플릿</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">구독하기</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                            </ul>
+                            <ul class="site">
+                                <li>
+                                    <a href="#">고객센터</a>
+                                </li>
+                            </ul>
+                        </ul><!-- //partner-site -->
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="footer-info02 footer-info">
+                    <div class="inner">
+                        <div class="left-content">
+                            <div class="footer-logo">
+                                <img src="img/offcanvas-logo.svg" alt="viral-main-logo">
+                            </div>
+                            <div class="support-links">
+                                <div class="link" id="terms-btn">
+                                    <a href="#">이용약관</a>
+                                </div>
+                                <div class="link" id="privacy-btn">
+                                    <a href="#">개인정보처리방침</a>
+                                </div>
+                            </div><!-- //support-links -->
+                        </div>
+                        <div class="copyright">
+                            ©Viral 2025 All rights reserved.
+                        </div>
+                    </div>
+                </div><!-- //footer-info01 -->
+            </div>
+            
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const exampleImg = document.querySelector(".exampleImg");
+            const ratioButtons = document.querySelectorAll(".select-box"); 
+
+            ratioButtons.forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.preventDefault(); // 기본 이벤트 방지
+
+                    ratioButtons.forEach(btn => {
+                        btn.classList.remove("b-show"); 
+                    });
+
+                    button.classList.add("b-show");
+                    
+                    if (button.classList.contains("ratio-16")) {
+                        updateMockup(exampleImg, "img/template/example-img-16_9.png", "ratio16-item");
+                    } else if (button.classList.contains("ratio-1")) {
+                        updateMockup(exampleImg, "img/template/example-img-1_1.png", "ratio1-item");
+                    } else if (button.classList.contains("ratio-9")) {
+                        updateMockup(exampleImg, "img/template/example-img-9_16.png", "ratio9-item");
+                    }
+                });
+            });
+
+            function updateMockup(imgElement, newSrc, newClass) {
+                imgElement.classList.remove("ratio16-item", "ratio1-item", "ratio9-item");
+                imgElement.classList.add(newClass);
+                imgElement.src = newSrc;
+            }
+        });
+    </script>
+</body>
+</html>
